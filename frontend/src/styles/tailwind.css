@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #1B365D; /* slate-900 - Deep trust, cybersecurity authority foundation */
+    --color-primary-foreground: #FFFFFF; /* white - High contrast text on primary */
+    
+    /* Secondary Colors */
+    --color-secondary: #2E5984; /* blue-800 - Supporting expertise, professional credibility layer */
+    --color-secondary-foreground: #FFFFFF; /* white - High contrast text on secondary */
+    
+    /* Accent Colors */
+    --color-accent: #00D4AA; /* teal-400 - Success moments, learning achievements highlight */
+    --color-accent-foreground: #1E293B; /* slate-800 - Dark text on bright accent */
+    
+    /* Background & Surface */
+    --color-background: #FAFBFC; /* gray-50 - Clean learning canvas, distraction-free focus */
+    --color-foreground: #1E293B; /* slate-800 - Clear readability, serious content delivery */
+    --color-surface: #F1F5F9; /* slate-100 - Subtle content separation, gentle hierarchy */
+    
+    /* Card & Popover */
+    --color-card: #FFFFFF; /* white - Clean card backgrounds */
+    --color-card-foreground: #1E293B; /* slate-800 - Card text color */
+    --color-popover: #FFFFFF; /* white - Popover backgrounds */
+    --color-popover-foreground: #1E293B; /* slate-800 - Popover text color */
+    
+    /* Muted */
+    --color-muted: #F1F5F9; /* slate-100 - Muted backgrounds */
+    --color-muted-foreground: #64748B; /* slate-500 - Supporting information, contextual guidance */
+    
+    /* Border & Input */
+    --color-border: #E2E8F0; /* slate-200 - Subtle borders */
+    --color-input: #E2E8F0; /* slate-200 - Input borders */
+    --color-ring: #2E5984; /* blue-800 - Focus ring color */
+    
+    /* Semantic Colors */
+    --color-success: #10B981; /* emerald-500 - Positive security status, safe outcomes */
+    --color-success-foreground: #FFFFFF; /* white - Text on success background */
+    
+    --color-warning: #F59E0B; /* amber-500 - Attention without alarm, caution signals */
+    --color-warning-foreground: #1E293B; /* slate-800 - Text on warning background */
+    
+    --color-error: #EF4444; /* red-500 - Threat identification, protective urgency */
+    --color-error-foreground: #FFFFFF; /* white - Text on error background */
+    
+    --color-destructive: #EF4444; /* red-500 - Destructive actions */
+    --color-destructive-foreground: #FFFFFF; /* white - Text on destructive background */
+    
+    /* Brand Colors */
+    --color-brand-primary: #2563EB; /* blue-600 - Deep Intelligence Blue */
+    --color-brand-primary-rgb: 37 99 235;
+    --color-brand-secondary: #7C3AED; /* violet-600 - Vigilant Purple */
+    --color-brand-secondary-rgb: 124 58 237;
+    --color-brand-accent: #059669; /* emerald-600 - Protection Green */
+    --color-brand-accent-rgb: 5 150 105;
+    --color-brand-trust: #0891B2; /* cyan-600 - Credibility Cyan */
+    --color-brand-trust-rgb: 8 145 178;
+    --color-brand-cta: #DC2626; /* red-600 - Urgent Action Red */
+    --color-brand-cta-rgb: 220 38 38;
+    
+    /* Typography */
+    --font-headline: 'Inter', sans-serif;
+    --font-body: 'Source Sans 3', sans-serif;
+    --font-cta: 'Inter', sans-serif;
+    --font-accent: 'JetBrains Mono', monospace;
+    
+    /* Spacing Scale (8px base with 1.5 golden ratio) */
+    --spacing-xs: 0.75rem; /* 12px */
+    --spacing-sm: 1.25rem; /* 20px */
+    --spacing-md: 2rem; /* 32px */
+    --spacing-lg: 3.25rem; /* 52px */
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem; /* 4px */
+    --radius-md: 0.5rem; /* 8px */
+    --radius-lg: 1rem; /* 16px */
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-brand: 0 1px 3px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.05);
+    
+    /* Transitions */
+    --transition-base: 0.3s ease-out;
+    --transition-fast: 0.15s ease-out;
+    --transition-slow: 0.5s ease-out;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline font-bold;
+  }
+  
+  button {
+    @apply font-cta;
+  }
+  
+  code, pre {
+    @apply font-accent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .transition-smooth {
+    transition: all var(--transition-base);
+  }
+  
+  .shadow-brand {
+    box-shadow: var(--shadow-brand);
+  }
+}
