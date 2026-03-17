@@ -43,3 +43,8 @@ frontend/.env.production.local
 
 # Large local datasets (not app source)
 1000 QR Images of Malicious and Benign QR codes 2025/
+
+
+# docs
+
+docs/
